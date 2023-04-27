@@ -9,7 +9,10 @@ mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a
 ***********************************************************************/
 
 const mirrorArray = (array) => {
-  // Your code here
+  let mirrorPart = Array();
+  array.forEach(element => mirrorPart.unshift(element));
+  const mirroredArray = [...array, ...mirrorPart];
+  return mirroredArray;
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
